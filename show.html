@@ -1,100 +1,136 @@
-<html><head>
-<title>PH Utility</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<style>
+<html>
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300,800);
-*{
-    font-family: Open Sans;
-}
-.btn{
-	padding:  10px;
-    width:  100%;
-    border: none;
-    color: white;
-    margin-bottom:  10px;
-    cursor: pointer;
-    font-size:  17px;
-    border:1px solid white;
-}
-</style>
+<head>
+    <title>PH Utility</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300,800);
+        * {
+            font-family: Open Sans;
+        }
+        
+        .btn {
+            padding: 10px;
+            width: 100%;
+            border: none;
+            color: white;
+            margin-bottom: 10px;
+            cursor: pointer;
+            font-size: 17px;
+            border: 1px solid white;
+        }
+    </style>
 
 </head>
 
 <body>
-<div class = "container">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<input type="text" id="title" placeholder="Title">
-    <input type="text" id="copy" placeholder="Text to copy"> <input type="number" name="quantity" id="width" min="1" max="100" value="50"> <button value="add" id="add" onclick="addCopyPaste()">Add</button>
-    <br><br>
-    <div style="display:none" id="power">
-<p id="p1">null</p>
-<p id="p2">false</p>
-<p id="p3">dpServiceConfig?.customerImpl</p>
-    <p id="p4">prProblem</p>
-    <p id="p5">import sc.control.ExecutionMode;
-ExecutionMode.Normal;</p>
-    
-    <p id="p6">dpServiceConfig?.cpeDevice</p>
-    <p id="p7">dpServiceConfig?.msan</p>
-    <p id="p8">dpServiceConfig?.router</p>
-    <p id="p9">dpServiceConfig?.productAndServices</p>
-    <p id="p10">true</p>
-    <p id="p11">dpServiceConfig?.filters</p>
-    <p id="p12">import da.control.DaMethod;DaMethod.ForceConnectorCall;</p><p id="p13">dpServiceConfig?.line</p><p id="p14">'Pending-PathfinderResponse'</p><p id="p15">import omni.util.mydesk.transfer.PFToMyDeskReason;PFToMyDeskReason.SMC_INVOLVEMENT_REQUIRED;</p><p id="p16">import omni.transfers.RemedyClassification;RemedyClassification.FMT_AUTH;</p><p id="p17">import omni.util.mydesk.transfer.TeamAssignment;TeamAssignment.FMCaseManagement</p><p id="p18">import omni.transfers.BSReason;BSReason.FMT_AUTH;</p><p id="p19">dpServiceConfig?.keys.cli</p><p id="p20">.outRepairResult?.isNotExecutedOrFailed()</p><p id="p21">.outRepairException?.isUNWILLING()</p><p id="p22">?.outRepairException?.isUNABLE_CUSTOMERCARE()</p><p id="p23">?.outRepairException?.isUNABLE_TECHNICAL()</p></div>
-    
-    <div id="btns">
-    <button onclick="copyToClipboard('#p1')" class="btn" style="background: #4e4e4e;">Null</button><br>
+    <div class="container">
 
-<button onclick="copyToClipboard('#p3')" class="btn" style="background: #358a7b;width:19%;">Cust Impl</button>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-<button onclick="copyToClipboard('#p6')" class="btn" style="background: #1b3463;width:19%;">CPE</button>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="copy">State</label>
+                <input type="text" class="form-control" id="copy">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="number">Zip</label>
+                <input type="number" name="quantity" id="width" class="form-control" min="1" max="100" value="50">
+            </div>
+            <div class="form-group col-md-2">
+                <button value="add" id="add" class="btn btn-primary" onclick="addCopyPaste()">Add</button>
+            </div>
+        </div>
 
-<button onclick="copyToClipboard('#p7')" class="btn" style="background: #1b3463;width:19%;">MSAN</button>
+        <br>
+        <br>
+        <div style="display:none" id="power">
+            <p id="p1">null</p>
+            <p id="p2">false</p>
+            <p id="p3">dpServiceConfig?.customerImpl</p>
+            <p id="p4">prProblem</p>
+            <p id="p5">import sc.control.ExecutionMode; ExecutionMode.Normal;</p>
+            <p id="p6">dpServiceConfig?.cpeDevice</p>
+            <p id="p7">dpServiceConfig?.msan</p>
+            <p id="p8">dpServiceConfig?.router</p>
+            <p id="p9">dpServiceConfig?.productAndServices</p>
+            <p id="p10">true</p>
+            <p id="p11">dpServiceConfig?.filters</p>
+            <p id="p12">import da.control.DaMethod;DaMethod.ForceConnectorCall;</p>
+            <p id="p13">dpServiceConfig?.line</p>
+            <p id="p14">'Pending-PathfinderResponse'</p>
+            <p id="p15">import omni.util.mydesk.transfer.PFToMyDeskReason;PFToMyDeskReason.SMC_INVOLVEMENT_REQUIRED;</p>
+            <p id="p16">import omni.transfers.RemedyClassification;RemedyClassification.FMT_AUTH;</p>
+            <p id="p17">import omni.util.mydesk.transfer.TeamAssignment;TeamAssignment.FMCaseManagement</p>
+            <p id="p18">import omni.transfers.BSReason;BSReason.FMT_AUTH;</p>
+            <p id="p19">dpServiceConfig?.keys.cli</p>
+            <p id="p20">.outRepairResult?.isNotExecutedOrFailed()</p>
+            <p id="p21">.outRepairException?.isUNWILLING()</p>
+            <p id="p22">?.outRepairException?.isUNABLE_CUSTOMERCARE()</p>
+            <p id="p23">?.outRepairException?.isUNABLE_TECHNICAL()</p>
+        </div>
 
-<button onclick="copyToClipboard('#p8')" class="btn" style="background: #1b3463;width:19%;">Router</button>
+        <div id="btns">
+            <button onclick="copyToClipboard('#p1')" class="btn" style="background: #4e4e4e;">Null</button>
+            <br>
+            <button onclick="copyToClipboard('#p3')" class="btn" style="background: #358a7b;width:19%;">Cust Impl</button>
+            <button onclick="copyToClipboard('#p6')" class="btn" style="background: #1b3463;width:19%;">CPE</button>
+            <button onclick="copyToClipboard('#p7')" class="btn" style="background: #1b3463;width:19%;">MSAN</button>
+            <button onclick="copyToClipboard('#p8')" class="btn" style="background: #1b3463;width:19%;">Router</button>
+            <button onclick="copyToClipboard('#p11')" class="btn" style="background: #1b3463;width:21%;">Filters</button>
+            <br>
+            <button onclick="copyToClipboard('#p4')" class="btn" style="background: #1e2b0c;width:50%;">prProb</button>
+            <button onclick="copyToClipboard('#p9')" class="btn" style="background: #1b3463;width:49%;">Product and Services</button>
+            <button onclick="copyToClipboard('#p2')" class="btn" style="background: #631b1b;width:49%;">false</button>
+            <button onclick="copyToClipboard('#p10')" class="btn" style="background: #1b5c63;width:50%;">true</button>
+            <button onclick="copyToClipboard('#p5')" class="btn" style="background: #1b3463;">Exec.Normal</button>
+            <button onclick="copyToClipboard('#p12')" class="btn" style="background: #1b3463; width:25%;">Force Connector</button>
+            <button onclick="copyToClipboard('#p13')" class="btn" style="background: #1b3463; width:25%;">Line</button>
+            <button onclick="copyToClipboard('#p14')" class="btn" style="background: #1b3463; width:25%;">inMyDeskStatus</button>
+            <button onclick="copyToClipboard('#p15')" class="btn" style="background: #1b3463; width:25%;">PFToMyDesk</button>
+            <button onclick="copyToClipboard('#p16')" class="btn" style="background: #1b3463; width:25%;">Remedy</button>
+            <button onclick="copyToClipboard('#p17')" class="btn" style="background: #1b3463; width:25%;">FMCase</button>
+            <button onclick="copyToClipboard('#p18')" class="btn" style="background: #1b3463; width:25%;">BSRes</button>
+            <button onclick="copyToClipboard('#p19')" class="btn" style="background: #1b3463; width:25%;">CLI</button>
+            <button onclick="copyToClipboard('#p20')" class="btn" style="background: #1b3463; width:25%;">Repair not exec</button>
+            <button onclick="copyToClipboard('#p21')" class="btn" style="background: #1b3463; width:25%;">util unwill</button>
+            <button onclick="copyToClipboard('#p22')" class="btn" style="background: #1b3463; width:25%;">util unable cus</button>
+            <button onclick="copyToClipboard('#p23')" class="btn" style="background: #1b3463; width:25%;">util unable tech</button>
+        </div>
 
+        <script type="text/javascript">
+            var x = 24;
 
-<button onclick="copyToClipboard('#p11')" class="btn" style="background: #1b3463;width:21%;">Filters</button>
+            function copyToClipboard(element) {
+                var $temp = $("<input>");
+                $("body").append($temp);
+                $temp.val($(element).text()).select();
+                document.execCommand("copy");
+                $temp.remove();
+            }
 
-<br><button onclick="copyToClipboard('#p4')" class="btn" style="background: #1e2b0c;width:50%;">prProb</button>
+            function addCopyPaste(element) {
+                var txIn = $('#copy').val();
+                var txTitle = $('#title').val();
+                var txwidth = $('#width').val();
+                var btnContent = "<button onclick=\"copyToClipboard('#p" + x + "')\" class = \"btn\"  style=\"background: #1b3463; width:" + txwidth + "%;\">" + txTitle + "</button>";
 
-<button onclick="copyToClipboard('#p9')" class="btn" style="background: #1b3463;width:49%;">Product and Services</button>
+                $("#btns").append(btnContent);
 
+                var powerContent = '<p id="p' + x + '">' + txIn + '</p>'
+                $("#power").append(powerContent);
+                x++;
+            }
+        </script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </div>
 
-<button onclick="copyToClipboard('#p2')" class="btn" style="background: #631b1b;width:49%;">false</button>
+</body>
 
-<button onclick="copyToClipboard('#p10')" class="btn" style="background: #1b5c63;width:50%;">true</button>
-
-<button onclick="copyToClipboard('#p5')" class="btn" style="background: #1b3463;">Exec.Normal</button>
-
-<button onclick="copyToClipboard('#p12')" class="btn" style="background: #1b3463; width:25%;">Force Connector</button><button onclick="copyToClipboard('#p13')" class="btn" style="background: #1b3463; width:25%;">Line</button><button onclick="copyToClipboard('#p14')" class="btn" style="background: #1b3463; width:25%;">inMyDeskStatus</button><button onclick="copyToClipboard('#p15')" class="btn" style="background: #1b3463; width:25%;">PFToMyDesk</button><button onclick="copyToClipboard('#p16')" class="btn" style="background: #1b3463; width:25%;">Remedy</button><button onclick="copyToClipboard('#p17')" class="btn" style="background: #1b3463; width:25%;">FMCase</button><button onclick="copyToClipboard('#p18')" class="btn" style="background: #1b3463; width:25%;">BSRes</button><button onclick="copyToClipboard('#p19')" class="btn" style="background: #1b3463; width:25%;">CLI</button><button onclick="copyToClipboard('#p20')" class="btn" style="background: #1b3463; width:25%;">Repair not exec</button><button onclick="copyToClipboard('#p21')" class="btn" style="background: #1b3463; width:25%;">util unwill</button><button onclick="copyToClipboard('#p22')" class="btn" style="background: #1b3463; width:25%;">util unable cus</button><button onclick="copyToClipboard('#p23')" class="btn" style="background: #1b3463; width:25%;">util unable tech</button></div>
-
-    <script type="text/javascript">
-    	var x = 24;
-        function copyToClipboard(element) {
-          var $temp = $("<input>");
-          $("body").append($temp);
-          $temp.val($(element).text()).select();
-          document.execCommand("copy");
-          $temp.remove();
-        }
-        function addCopyPaste(element) {
-          var txIn = $('#copy').val();
-          var txTitle = $('#title').val();
-          var txwidth = $('#width').val();
-          var btnContent = "<button onclick=\"copyToClipboard('#p"+x+"')\" class = \"btn\"  style=\"background: #1b3463; width:"+txwidth+"%;\">"+txTitle+"</button>" ;
-          
-          $("#btns").append(btnContent);
-          
-          var powerContent = '<p id="p'+x+'">'+txIn+'</p>'
-          $("#power").append(powerContent);
-          x++;
-        }
-    </script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-</div>
-
-</body></html>
+</html>
