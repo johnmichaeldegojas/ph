@@ -42,7 +42,7 @@
                 <input type="number" name="quantity" id="width" class="form-control" min="1" max="100" value="50">
             </div>
             <div class="form-group col-md-2">
-                <button value="add" id="add" class="btn btn-primary" onclick="addCopyPaste()" style ="margin-top:27px">Add</button>
+                <button value="add" id="add" class="btn btn-primary" onclick="addCopyPaste()" style ="margin-top:px">Add</button>
             </div>
         </div>
 
@@ -115,7 +115,7 @@
                 var txIn = $('#copy').val();
                 var txTitle = $('#title').val();
                 var txwidth = $('#width').val();
-                var btnContent = "<button onclick=\"copyToClipboard('#p" + x + "')\" class = \"btn\"  style=\"background: #1b3463; width:" + txwidth + "%;\">" + txTitle + "</button>";
+                var btnContent = "<button onclick=\"copyToClipboard('#p" + x + "')\" class = \"btn2\"  style=\"background: #1b3463; width:" + txwidth + "%;\">" + txTitle + "</button>";
 
                 $("#btns").append(btnContent);
 
