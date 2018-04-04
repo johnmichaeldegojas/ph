@@ -120,101 +120,6 @@
 */
     </style>
 
-</head>
-
-<body>
-    <br>
-    <div class="container">
-
-
-        <div class="form-row">
-            <div class="form-group col-md-3">
-                <label for="title">Title</label>
-                <input type="text" class="form-control" id="title">
-            </div>
-            <div class="form-group col-md-3">
-                <label for="copy">Text to Copy</label>
-                <input type="text" class="form-control" id="copy">
-            </div>
-            <div class="form-group col-md-2">
-                <label for="number">Button width</label>
-                <input type="number" name="quantity" id="width" class="form-control" min="1" max="100" value="50">
-            </div>
-            <div class="form-group col-md-2">
-                <label for="number">Color</label>
-                <select id="colorselector">
-                    <option value="106" data-color="#A0522D">sienna</option>
-                    <option value="47" data-color="#CD5C5C" selected="selected">indianred</option>
-                    <option value="87" data-color="#FF4500">orangered</option>
-                    <option value="15" data-color="#DC143C">crimson</option>
-                    <option value="24" data-color="#FF8C00">darkorange</option>
-                    <option value="78" data-color="#C71585">mediumvioletred</option>
-                </select>
-
-                <script>
-                    $('#colorselector').colorselector();
-                </script>
-            </div>
-            
-            <div class="form-group col-md-2">
-                <button value="add" id="add" class="btn btn-primary" onclick="addCopyPaste()" style ="margin-top:32px">Add</button>
-            </div>
-        </div>
-
-        <div style="display:none" id="power">
-            <p id="p1">null</p>
-            <p id="p2">false</p>
-            <p id="p3">dpServiceConfig?.customerImpl</p>
-            <p id="p4">prProblem</p>
-            <p id="p5">import sc.control.ExecutionMode; ExecutionMode.Normal;</p>
-            <p id="p6">dpServiceConfig?.cpeDevice</p>
-            <p id="p7">dpServiceConfig?.msan</p>
-            <p id="p8">dpServiceConfig?.router</p>
-            <p id="p9">dpServiceConfig?.productAndServices</p>
-            <p id="p10">true</p>
-            <p id="p11">dpServiceConfig?.filters</p>
-            <p id="p12">import da.control.DaMethod;DaMethod.ForceConnectorCall;</p>
-            <p id="p13">dpServiceConfig?.line</p>
-            <p id="p14">'Pending-PathfinderResponse'</p>
-            <p id="p15">import omni.util.mydesk.transfer.PFToMyDeskReason;PFToMyDeskReason.SMC_INVOLVEMENT_REQUIRED;</p>
-            <p id="p16">import omni.transfers.RemedyClassification;RemedyClassification.FMT_AUTH;</p>
-            <p id="p17">import omni.util.mydesk.transfer.TeamAssignment;TeamAssignment.FMCaseManagement</p>
-            <p id="p18">import omni.transfers.BSReason;BSReason.FMT_AUTH;</p>
-            <p id="p19">dpServiceConfig?.keys.cli</p>
-            <p id="p20">.outRepairResult?.isNotExecutedOrFailed()</p>
-            <p id="p21">.outRepairException?.isUNWILLING()</p>
-            <p id="p22">?.outRepairException?.isUNABLE_CUSTOMERCARE()</p>
-            <p id="p23">?.outRepairException?.isUNABLE_TECHNICAL()</p>
-        </div>
-
-        <div id="btns">
-            <button onclick="copyToClipboard('#p1')" class="btn2" style="background: #4e4e4e;">Null</button>
-            <br>
-            <button onclick="copyToClipboard('#p3')" class="btn2" style="background: #358a7b;width:19%;">Cust Impl</button>
-            <button onclick="copyToClipboard('#p6')" class="btn2" style="background: #1b3463;width:19%;">CPE</button>
-            <button onclick="copyToClipboard('#p7')" class="btn2" style="background: #1b3463;width:19%;">MSAN</button>
-            <button onclick="copyToClipboard('#p8')" class="btn2" style="background: #1b3463;width:19%;">Router</button>
-            <button onclick="copyToClipboard('#p11')" class="btn2" style="background: #1b3463;width:21%;">Filters</button>
-            <br>
-            <button onclick="copyToClipboard('#p4')" class="btn2" style="background: #1e2b0c;width:50%;">prProb</button>
-            <button onclick="copyToClipboard('#p9')" class="btn2" style="background: #1b3463;width:49%;">Product and Services</button>
-            <button onclick="copyToClipboard('#p2')" class="btn2" style="background: #631b1b;width:49%;">false</button>
-            <button onclick="copyToClipboard('#p10')" class="btn2" style="background: #1b5c63;width:50%;">true</button>
-            <button onclick="copyToClipboard('#p5')" class="btn2" style="background: #1b3463;">Exec.Normal</button>
-            <button onclick="copyToClipboard('#p12')" class="btn2" style="background: #1b3463; width:25%;">Force Connector</button>
-            <button onclick="copyToClipboard('#p13')" class="btn2" style="background: #1b3463; width:25%;">Line</button>
-            <button onclick="copyToClipboard('#p14')" class="btn2" style="background: #1b3463; width:23%;">inMyDeskStatus</button>
-            <button onclick="copyToClipboard('#p15')" class="btn2" style="background: #1b3463; width:25%;">PFToMyDesk</button>
-            <button onclick="copyToClipboard('#p16')" class="btn2" style="background: #1b3463; width:25%;">Remedy</button>
-            <button onclick="copyToClipboard('#p17')" class="btn2" style="background: #1b3463; width:25%;">FMCase</button>
-            <button onclick="copyToClipboard('#p18')" class="btn2" style="background: #1b3463; width:23%;">BSRes</button>
-            <button onclick="copyToClipboard('#p19')" class="btn2" style="background: #1b3463; width:25%;">CLI</button>
-            <button onclick="copyToClipboard('#p20')" class="btn2" style="background: #1b3463; width:25%;">Repair not exec</button>
-            <button onclick="copyToClipboard('#p21')" class="btn2" style="background: #1b3463; width:25%;">util unwill</button>
-            <button onclick="copyToClipboard('#p22')" class="btn2" style="background: #1b3463; width:23%;">util unable cus</button>
-            <button onclick="copyToClipboard('#p23')" class="btn2" style="background: #1b3463; width:25%;">util unable tech</button>
-        </div>
-
         <script type="text/javascript">
             var x = 24;
 
@@ -373,6 +278,101 @@
 })(jQuery, window, document);
         
         </script>
+</head>
+
+<body>
+    <br>
+    <div class="container">
+
+
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="copy">Text to Copy</label>
+                <input type="text" class="form-control" id="copy">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="number">Button width</label>
+                <input type="number" name="quantity" id="width" class="form-control" min="1" max="100" value="50">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="number">Color</label>
+                <select id="colorselector">
+                    <option value="106" data-color="#A0522D">sienna</option>
+                    <option value="47" data-color="#CD5C5C" selected="selected">indianred</option>
+                    <option value="87" data-color="#FF4500">orangered</option>
+                    <option value="15" data-color="#DC143C">crimson</option>
+                    <option value="24" data-color="#FF8C00">darkorange</option>
+                    <option value="78" data-color="#C71585">mediumvioletred</option>
+                </select>
+
+                <script>
+                    $('#colorselector').colorselector();
+                </script>
+            </div>
+            
+            <div class="form-group col-md-2">
+                <button value="add" id="add" class="btn btn-primary" onclick="addCopyPaste()" style ="margin-top:32px">Add</button>
+            </div>
+        </div>
+
+        <div style="display:none" id="power">
+            <p id="p1">null</p>
+            <p id="p2">false</p>
+            <p id="p3">dpServiceConfig?.customerImpl</p>
+            <p id="p4">prProblem</p>
+            <p id="p5">import sc.control.ExecutionMode; ExecutionMode.Normal;</p>
+            <p id="p6">dpServiceConfig?.cpeDevice</p>
+            <p id="p7">dpServiceConfig?.msan</p>
+            <p id="p8">dpServiceConfig?.router</p>
+            <p id="p9">dpServiceConfig?.productAndServices</p>
+            <p id="p10">true</p>
+            <p id="p11">dpServiceConfig?.filters</p>
+            <p id="p12">import da.control.DaMethod;DaMethod.ForceConnectorCall;</p>
+            <p id="p13">dpServiceConfig?.line</p>
+            <p id="p14">'Pending-PathfinderResponse'</p>
+            <p id="p15">import omni.util.mydesk.transfer.PFToMyDeskReason;PFToMyDeskReason.SMC_INVOLVEMENT_REQUIRED;</p>
+            <p id="p16">import omni.transfers.RemedyClassification;RemedyClassification.FMT_AUTH;</p>
+            <p id="p17">import omni.util.mydesk.transfer.TeamAssignment;TeamAssignment.FMCaseManagement</p>
+            <p id="p18">import omni.transfers.BSReason;BSReason.FMT_AUTH;</p>
+            <p id="p19">dpServiceConfig?.keys.cli</p>
+            <p id="p20">.outRepairResult?.isNotExecutedOrFailed()</p>
+            <p id="p21">.outRepairException?.isUNWILLING()</p>
+            <p id="p22">?.outRepairException?.isUNABLE_CUSTOMERCARE()</p>
+            <p id="p23">?.outRepairException?.isUNABLE_TECHNICAL()</p>
+        </div>
+
+        <div id="btns">
+            <button onclick="copyToClipboard('#p1')" class="btn2" style="background: #4e4e4e;">Null</button>
+            <br>
+            <button onclick="copyToClipboard('#p3')" class="btn2" style="background: #358a7b;width:19%;">Cust Impl</button>
+            <button onclick="copyToClipboard('#p6')" class="btn2" style="background: #1b3463;width:19%;">CPE</button>
+            <button onclick="copyToClipboard('#p7')" class="btn2" style="background: #1b3463;width:19%;">MSAN</button>
+            <button onclick="copyToClipboard('#p8')" class="btn2" style="background: #1b3463;width:19%;">Router</button>
+            <button onclick="copyToClipboard('#p11')" class="btn2" style="background: #1b3463;width:21%;">Filters</button>
+            <br>
+            <button onclick="copyToClipboard('#p4')" class="btn2" style="background: #1e2b0c;width:50%;">prProb</button>
+            <button onclick="copyToClipboard('#p9')" class="btn2" style="background: #1b3463;width:49%;">Product and Services</button>
+            <button onclick="copyToClipboard('#p2')" class="btn2" style="background: #631b1b;width:49%;">false</button>
+            <button onclick="copyToClipboard('#p10')" class="btn2" style="background: #1b5c63;width:50%;">true</button>
+            <button onclick="copyToClipboard('#p5')" class="btn2" style="background: #1b3463;">Exec.Normal</button>
+            <button onclick="copyToClipboard('#p12')" class="btn2" style="background: #1b3463; width:25%;">Force Connector</button>
+            <button onclick="copyToClipboard('#p13')" class="btn2" style="background: #1b3463; width:25%;">Line</button>
+            <button onclick="copyToClipboard('#p14')" class="btn2" style="background: #1b3463; width:23%;">inMyDeskStatus</button>
+            <button onclick="copyToClipboard('#p15')" class="btn2" style="background: #1b3463; width:25%;">PFToMyDesk</button>
+            <button onclick="copyToClipboard('#p16')" class="btn2" style="background: #1b3463; width:25%;">Remedy</button>
+            <button onclick="copyToClipboard('#p17')" class="btn2" style="background: #1b3463; width:25%;">FMCase</button>
+            <button onclick="copyToClipboard('#p18')" class="btn2" style="background: #1b3463; width:23%;">BSRes</button>
+            <button onclick="copyToClipboard('#p19')" class="btn2" style="background: #1b3463; width:25%;">CLI</button>
+            <button onclick="copyToClipboard('#p20')" class="btn2" style="background: #1b3463; width:25%;">Repair not exec</button>
+            <button onclick="copyToClipboard('#p21')" class="btn2" style="background: #1b3463; width:25%;">util unwill</button>
+            <button onclick="copyToClipboard('#p22')" class="btn2" style="background: #1b3463; width:23%;">util unable cus</button>
+            <button onclick="copyToClipboard('#p23')" class="btn2" style="background: #1b3463; width:25%;">util unable tech</button>
+        </div>
+
     </div>
 
 </body>
