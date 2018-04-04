@@ -3,7 +3,6 @@
 <head>
     <title>PH Utility</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-colorselector@0.1.0/dist/bootstrap-colorselector.min.css">
     <style>
         @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300,800);
         * {
@@ -49,9 +48,6 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-        <script src=" https://cdn.jsdelivr.net/npm/bootstrap-colorselector@0.1.0/lib/jquery-1.10.2/jquery-1.10.2.min.js"></script>
-   
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap-colorselector@0.1.0/dist/bootstrap-colorselector.min.js"></script>
 </head>
 
 <body>
@@ -72,21 +68,7 @@
                 <label for="number">Button width</label>
                 <input type="number" name="quantity" id="width" class="form-control" min="1" max="100" value="50">
             </div>
-            <div class="form-group col-md-2">
-                <label for="number">Color</label>
-                <select id="colorselector">
-                    <option value="106" data-color="#A0522D">sienna</option>
-                    <option value="47" data-color="#CD5C5C" selected="selected">indianred</option>
-                    <option value="87" data-color="#FF4500">orangered</option>
-                    <option value="15" data-color="#DC143C">crimson</option>
-                    <option value="24" data-color="#FF8C00">darkorange</option>
-                    <option value="78" data-color="#C71585">mediumvioletred</option>
-                </select>
-
-                <script>
-                    $('#colorselector').colorselector();
-                </script>
-            </div>
+         
             
             <div class="form-group col-md-2">
                 <button value="add" id="add" class="btn btn-primary" onclick="addCopyPaste()" style ="margin-top:32px">Add</button>
