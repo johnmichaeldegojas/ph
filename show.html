@@ -31,11 +31,11 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
         <div class="form-row">
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-3">
                 <label for="title">Title</label>
                 <input type="text" class="form-control" id="title">
             </div>
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-3">
                 <label for="copy">Text to Copy</label>
                 <input type="text" class="form-control" id="copy">
             </div>
@@ -43,6 +43,22 @@
                 <label for="number">Button width</label>
                 <input type="number" name="quantity" id="width" class="form-control" min="1" max="100" value="50">
             </div>
+            <div class="form-group col-md-2">
+                <label for="number">Color</label>
+                <select id="colorselector">
+                    <option value="106" data-color="#A0522D">sienna</option>
+                    <option value="47" data-color="#CD5C5C" selected="selected">indianred</option>
+                    <option value="87" data-color="#FF4500">orangered</option>
+                    <option value="15" data-color="#DC143C">crimson</option>
+                    <option value="24" data-color="#FF8C00">darkorange</option>
+                    <option value="78" data-color="#C71585">mediumvioletred</option>
+                </select>
+
+                <script>
+                    $('#colorselector').colorselector();
+                </script>
+            </div>
+            
             <div class="form-group col-md-2">
                 <button value="add" id="add" class="btn btn-primary" onclick="addCopyPaste()" style ="margin-top:32px">Add</button>
             </div>
