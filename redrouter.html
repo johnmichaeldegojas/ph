@@ -36,12 +36,7 @@
                 $temp.val($original).select();
                 document.execCommand("copy");
                 $temp.remove();
-                $(element).text('Copied');
-                $(element).disable();
-                window.setTimeout(function() {
-                   $(element).text($original);
-                   $(element).enable();
-                }, 1000);
+
                
             }
 
