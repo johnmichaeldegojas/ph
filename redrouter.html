@@ -31,11 +31,15 @@
                 
             function copyToClipboard(element) {
                 var $temp = $("<input>");
+                var $original = $(element).text();
                 $("body").append($temp);
-                $temp.val($(element).text()).select();
+                $temp.val($original).select();
                 document.execCommand("copy");
                 $temp.remove();
-
+                $(element).text('Copied');
+                window.setTimeout(function() {
+                   $(element).text($original);
+                }, 1000);
                
             }
 
