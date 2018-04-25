@@ -1,0 +1,115 @@
+<html>
+
+<head>
+    <title>PH Utility</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300,800);
+        * {
+            font-family: Open Sans;
+        }
+        
+        .btn2 {
+            padding: 10px;
+            width: 100%;
+            border: none;
+            color: white;
+            margin-bottom: 10px;
+            cursor: pointer;
+            font-size: 17px;
+            border: 1px solid white;
+        }
+    </style>
+
+        <script type="text/javascript">
+            var x = 24;
+
+            function copyToClipboard(element) {
+                var $temp = $("<input>");
+                $("body").append($temp);
+                $temp.val($(element).text()).select();
+                document.execCommand("copy");
+                $temp.remove();
+            }
+
+            function addCopyPaste(element) {
+                var txIn = $('#copy').val();
+                var txTitle = $('#title').val();
+                var txwidth = $('#width').val();
+                var btnContent = "<button onclick=\"copyToClipboard('#p" + x + "')\" class = \"btn2\"  style=\"background: #1b3463; width:" + txwidth + "%;\">" + txTitle + "</button>";
+
+                $("#btns").append(btnContent);
+
+                var powerContent = '<p id="p' + x + '">' + txIn + '</p>'
+                $("#power").append(powerContent);
+                x++;
+            }
+        </script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <br>
+    <div class="container">
+
+
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="copy">Text to Copy</label>
+                <input type="text" class="form-control" id="copy">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="number">Button width</label>
+                <input type="number" name="quantity" id="width" class="form-control" min="1" max="100" value="50">
+            </div>
+         
+            
+            <div class="form-group col-md-2">
+                <button value="add" id="add" class="btn btn-primary" onclick="addCopyPaste()" style ="margin-top:32px">Add</button>
+            </div>
+        </div>
+
+        <div style="display:none" id="power">
+            
+            <p id="p1">TestRedRouterCheck</p>
+            <p id="p2">ProblemHandlingLegacyRouter</p>
+            <p id="p3">TransferEscalateCPEDispatched</p>
+            <p id="p4">redRouterTest</p>
+            <p id="p5">problemHandlingLegacyRouter</p>
+            <p id="p6">Not Red Router</p>
+            <p id="p7">redRouterTest?.outFinding?.redRouterStatusCheck?.RED_ROUTER</p>
+            <p id="p8">problemHandlingLegacyRouter?.legacyRouterReplaced == true</p>
+            <p id="p9">false</p>
+            <p id="p10">null</p>
+            <p id="p11">import sc.control.ExecutionMode;ExecutionMode.AutomationOnly;</p>
+            <h3>Codes</h3>
+            
+        </div>
+
+        <div id="btns">
+            <h3>Text Only</h3>
+            <button onclick="copyToClipboard('#p1')" class="btn2" style="background: #f44336;width:33%;">TestRedRouterCheck</button>
+            <button onclick="copyToClipboard('#p2')" class="btn2" style="background: #E91E63;width:33%;">ProblemHandlingLegacyRouter</button>
+            <button onclick="copyToClipboard('#p3')" class="btn2" style="background: #9C27B0;width:33%;">TransferEscalateCPEDispatched</button>
+            <button onclick="copyToClipboard('#p4')" class="btn2" style="background: #673AB7;width:33%;">problemHandlingLegacyRouter</button>
+            <button onclick="copyToClipboard('#p5')" class="btn2" style="background: #3F51B5;width:33%;">redRouterTest</button>
+            <button onclick="copyToClipboard('#p6')" class="btn2" style="background: #2196F3;width:33%;">Not Red Router</button>
+            <h3>Codes </h3>
+            <button onclick="copyToClipboard('#p7')" class="btn2" style="background: #03A9F4;width:50%;">Red Router Condition</button>
+            <button onclick="copyToClipboard('#p8')" class="btn2" style="background: #009688;width:50%;">PH Condition</button>
+            <button onclick="copyToClipboard('#p9')" class="btn2" style="background: #4CAF50;width:33%;">False</button>
+            <button onclick="copyToClipboard('#p10')" class="btn2" style="background: #8BC34A;width:33%;">Null</button>
+            <button onclick="copyToClipboard('#p11')" class="btn2" style="background: #607D8B;width:33%;">AutomationOnly</button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
