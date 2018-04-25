@@ -3,7 +3,7 @@
 <head>
     <title>PH Utility</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.css">
     <style>
         @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300,800);
         * {
@@ -25,18 +25,32 @@
         <script type="text/javascript">
             var x = 24;
 
+                toastr.options = {
+                  "closeButton": false,
+                  "debug": false,
+                  "newestOnTop": true,
+                  "progressBar": true,
+                  "positionClass": "toast-top-right",
+                  "preventDuplicates": false,
+                  "onclick": null,
+                  "showDuration": "300",
+                  "hideDuration": "1000",
+                  "timeOut": "3000",
+                  "extendedTimeOut": "1000",
+                  "showEasing": "swing",
+                  "hideEasing": "linear",
+                  "showMethod": "fadeIn",
+                  "hideMethod": "fadeOut"
+                };
             function copyToClipboard(element) {
                 var $temp = $("<input>");
                 $("body").append($temp);
                 $temp.val($(element).text()).select();
                 document.execCommand("copy");
                 $temp.remove();
-                $.toast({
-                heading: 'Successfully Copied!',
-                text: "Text: "+$temp,
-                showHideTransition: 'slide',
-                icon: 'success'
-            })
+
+                
+                toastr["success"]("Are you the six fingered man?");
             }
 
             function addCopyPaste(element) {
@@ -55,7 +69,7 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
 </head>
 
 <body>
