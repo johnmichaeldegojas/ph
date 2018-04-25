@@ -29,8 +29,8 @@
     
         <script type="text/javascript">
             var x = 24;
-
-                toastr.options = {
+                $(document).ready(function() { 
+                  toastr.options = {
                   "closeButton": false,
                   "debug": false,
                   "newestOnTop": true,
@@ -46,7 +46,8 @@
                   "hideEasing": "linear",
                   "showMethod": "fadeIn",
                   "hideMethod": "fadeOut"
-                };
+                };});
+                
             function copyToClipboard(element) {
                 var $temp = $("<input>");
                 $("body").append($temp);
