@@ -25,7 +25,7 @@
         <script type="text/javascript">
             var x = 24;
 
-                toastr.options = {
+                $toastr.options = {
                   "closeButton": false,
                   "debug": false,
                   "newestOnTop": true,
@@ -49,8 +49,8 @@
                 document.execCommand("copy");
                 $temp.remove();
 
-                
-                toastr["success"]("Are you the six fingered man?");
+                $toastr.success($temp, 'Text Successfully Copied');
+               
             }
 
             function addCopyPaste(element) {
