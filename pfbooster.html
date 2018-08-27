@@ -82,22 +82,12 @@ body,
   -webkit-transform: scale(1.4) translateY(0) translateZ(0);
           transform: scale(1.4) translateY(0) translateZ(0);
 }
-.filler{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(255,255,255,0.5);
-text-alignment:center;
-}
     </style>
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
         <script type="text/javascript">
-            $("#filler").hide();
+         
             function copyToClipboard(element) {
-                $("#filler").fadeIn(500).delay(1000).fadeOut(500);
                 var $temp = $("<input>");
                 $("body").append($temp);
                 $temp.val($(element).text()).select();
@@ -109,7 +99,7 @@ text-alignment:center;
 
 <body>
     <br>
-    <div id = "filler">Copied</div>
+    
 <div class="row middle-on-small center-on-small">
   <div class="column small-12 medium-6 large-4">
     <a href="#" onclick="copyToClipboard('#p1')" class="c-button c-button--gooey">
@@ -120,7 +110,6 @@ text-alignment:center;
         <div></div>
       </div>
     </a>
-    
     <p class="pen-info">Click this button and paste it to console, Press Space to go to next, 1 to select first choice, 2 to select second choice, etc</p>
   </div>
 </div>
