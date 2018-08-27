@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <title>PH Utility</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300,800);
+        * {
+            font-family: Open Sans;
+        }
+        
+        .btn2 {
+            padding: 10px;
+            width: 100%;
+	    height:100%;
+            border: none;
+            color: white;
+            margin-bottom: 10px;
+            cursor: pointer;
+            font-size: 25px;
+            border: 1px solid white;
+        }
+    </style>
+
+        <script type="text/javascript">
+            
+
+            function copyToClipboard(element) {
+                var $temp = $("<input>");
+                $("body").append($temp);
+                $temp.val($(element).text()).select();
+                document.execCommand("copy");
+                $temp.remove();
+            }
+
+        </script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <br>
+    <div class="container">
+
+
+        <div style="display:none" id="power">
+            <p id="p1">document.addEventListener("keyup", function(event){if(event.keyCode == 32){document.activeElement.blur();document.getElementById('dialogView_nextButton').click();}
+   if(event.keyCode == 49){
+     var positionInput = 0;var options = document.getElementsByTagName('input');var tempX = 0;for(i = 0; i < options.length; i++){var opt = options[i];if(opt.type=="radio"){if(tempX == positionInput){opt.click();break;}}}
+   }      
+                                                    if(event.keyCode == 50){
+                    var positionInput = 1;var options = document.getElementsByTagName('input');var tempX = 0;for(i = 0; i < options.length; i++){var opt = options[i];if(opt.type=="radio"){if(tempX == positionInput){opt.click();break;}tempX= tempX+1;}}                                  
+                                                    }                                                   if(event.keyCode == 51){
+                    var positionInput = 2;var options = document.getElementsByTagName('input');var tempX = 0;for(i = 0; i < options.length; i++){var opt = options[i];if(opt.type=="radio"){if(tempX == positionInput){opt.click();break;}tempX= tempX+1;}}                                  
+                                                    }});</p>
+            
+        </div>
+
+        <div id="btns">
+            <button onclick="copyToClipboard('#p1')" class="btn2" style="background: #4e4e4e;">PF Power Up</button>
+            
+        </div>
+
+    </div>
+
+</body>
+
+</html>
