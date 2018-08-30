@@ -84,16 +84,6 @@ body,
 }
     </style>
 
-        <script type="text/javascript">
-            
-            function copyToClipboard(element) {
-                var $temp = $("<input>");
-                $("body").append($temp);
-                $temp.val($(element).text()).select();
-                document.execCommand("copy");
-                $temp.remove();
-            }
-        </script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -103,7 +93,7 @@ body,
     <br>
 <div class="row middle-on-small center-on-small">
   <div class="column small-12 medium-6 large-4">
-    <a href="#!" onmouseover="copyToClipboard('#p1')" class="c-button c-button--gooey">
+    <a href="#!" onclick="copyToClipboard('#p1')" class="c-button c-button--gooey">
       PF Power Up
       <div class="c-button__blobs">
         <div></div>
